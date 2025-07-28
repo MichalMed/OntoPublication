@@ -1,0 +1,781 @@
+@prefix ns1: <https://slovník.gov.cz/generický/mpp-3.5-np/pojem/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<https://slovník.gov.cz/generický/mpp-3.5-np/glosář> a owl:Ontology, skos:ConceptScheme,
+    <http://onto.fel.cvut.cz/ontologies/slovník/agendový/popis-dat/pojem/glosář>;
+  dcterms:title "Vocabulary of the Metropolitan plan version 3.5 proposal for consideration - glossary"@en,
+    "Slovník Metropolitního plánu ve verzi 3.5 návrh k projednání - glosář"@cs;
+  dcterms:creator "Michal Med";
+  dcterms:created "2020-06-23T15:46:22.511+02:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+  dcterms:rights <https://creativecommons.org/licenses/by-nc-nd/4.0>;
+  owl:imports <https://slovník.gov.cz/datový/psp-2016/glosář>;
+  owl:versionIRI <https://slovník.gov.cz/generický/mpp-3.5-np/glosář/verze/3.5.0>;
+  <http://purl.org/vocab/vann/preferredNamespaceUri> "https://slovník.gov.cz/generický/mpp-3.5-np/pojem/";
+  <http://purl.org/vocab/vann/preferredNamespacePrefix> "mpp-3.5-np-pojem";
+  <http://purl.org/ontology/bibo/status> "Specification"@en, "Specifikace"@cs .
+
+ns1:stabilizované-nebo--transformační-a-rozvojové-plochy a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-objektu>,
+    <https://slovník.gov.cz/základní/pojem/mixin>, owl:Class;
+  skos:broader <https://slovník.gov.cz/základní/pojem/typ-objektu>, <https://slovník.gov.cz/základní/pojem/objekt>,
+    <https://slovník.gov.cz/základní/pojem/mixin>;
+  skos:topConceptOf <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Stabilized, transformation and development surfaces"@en, "Stabilizované, rozvojové a transformační plochy"@cs .
+
+ns1:má-krycí-list-lokality a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-vztahu>,
+    owl:ObjectProperty;
+  skos:broader <https://slovník.gov.cz/základní/pojem/typ-vztahu>, <https://slovník.gov.cz/základní/pojem/vztah>;
+  skos:topConceptOf <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  rdfs:subPropertyOf <https://slovník.gov.cz/základní/pojem/vztah>;
+  rdfs:domain <https://slovník.gov.cz/datový/psp-2016/pojem/lokalita>;
+  rdfs:range ns1:krycí-list-lokality;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  <http://onto.fel.cvut.cz/ontologies/slovník/agendový/popis-dat/pojem/je-pojmem> <https://slovník.gov.cz/generický/mpp-3.5-np>;
+  <http://onto.fel.cvut.cz/ontologies/slovník/agendový/popis-dat/pojem/je-záznamem>
+    <https://slovník.gov.cz/generický/mpp-3.5-np>;
+  <http://onto.fel.cvut.cz/ontologies/slovník/agendový/popis-dat/pojem/má-editora> <http://onto.fel.cvut.cz/ontologies/uzivatel/dbecbf70-b6ae-40b6-9b4b-0b03c44bcfba>;
+  <http://onto.fel.cvut.cz/ontologies/slovník/agendový/popis-dat/pojem/má-datum-a-čas-modifikace>
+    "2020-01-22T10:22:07.902+01:00";
+  skos:prefLabel "has cover sheet of locality"@en, "má krycí list lokality"@cs;
+  <http://onto.fel.cvut.cz/ontologies/slovník/agendový/popis-dat/pojem/má-stav-pojmu>
+    <http://onto.fel.cvut.cz/ontologies/application/termit/pojem/navrhovaný-pojem> .
+
+ns1:krycí-list-lokality a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-objektu>,
+    owl:Class;
+  skos:broader <https://slovník.gov.cz/základní/pojem/typ-objektu>, <https://slovník.gov.cz/základní/pojem/objekt>;
+  skos:topConceptOf <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Krycí list lokality"@cs, "Cover sheet of locality"@en;
+  skos:definition "Pro každou lokalitu je vypracován závazný krycí list lokality (dále jen „KLZ“), který obsahuje textový výčet regulací stanovených Metropolitním plánem pro využití a uspořádání území lokality včetně individuálního popisu lokality. Grafické prvky KLZ jsou informativní."@cs,
+    "COver sheets are prepared for each locality. It contains a textual list of regulations laid down by the Metropolitan plan for the use and arrangement of the area of locality, including individual description. Graphical features of cover sheet are informative."@en;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_37";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-3/h-0/p-37" .
+
+ns1:typ-struktury-pro-zastavitelné-nestavební-lokality a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-vlastnosti>,
+    <https://slovník.gov.cz/základní/pojem/typ-kvalitativní-vlastnosti>;
+  skos:broader ns1:typ-struktury;
+  rdfs:subPropertyOf ns1:typ-struktury;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Typ struktury pro zastavitelné nestavební lokality"@cs, "Type of structure for buildable non-construction localities"@en;
+  skos:definition "Tři typy struktur pro zastavitelné nestavební lokality: (11) parkový areál, (12) parkové prostranství, (13) parkový les."@cs,
+    "Three types of structure for buildable non-construction localities: (11) park grounds, (12) park area, (13) park forest."@en;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_40";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-3/h-2/p-40/o-2/b-b" .
+
+ns1:typ-struktury a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-vlastnosti>,
+    <https://slovník.gov.cz/základní/pojem/typ-kvalitativní-vlastnosti>, owl:DatatypeProperty;
+  skos:broader <https://slovník.gov.cz/základní/pojem/typ-vlastnosti>, <https://slovník.gov.cz/základní/pojem/vlastnost>,
+    <https://slovník.gov.cz/základní/pojem/typ-kvalitativní-vlastnosti>;
+  skos:topConceptOf <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  rdfs:subPropertyOf <https://slovník.gov.cz/základní/pojem/vlastnost>;
+  rdfs:domain ns1:struktura;
+  rdfs:range rdfs:Literal;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Typ struktury"@cs, "Type of structure"@en;
+  skos:definition "Typ struktury je jednou ze čtyř základních vlastností lokality, která spoluutváří její cílový charakter. Metropolitní plán stanovuje každé lokalitě typ struktury, přičemž rozlišuje: a) deset typů struktur pro zastavitelné stavební lokality: (01) rostlá struktura, (02) bloková struktura, (03) hybridní struktura, (04) heterogenní struktura, (05) vesnická struktura, (06) struktura zahradního města, (07) modernistická struktura, (08) struktura areálů produkce, (09) struktura areálů vybavenosti, (10) lineární struktura, b) tři typy struktur pro zastavitelné nestavební lokality: (11) parkový areál, (12) parkové prostranství, (13) parkový les, c) sedm typů struktur pro nezastavitelné lokality: (14) lesní krajina v rovině, (15) leso-zemědělská krajina, (16) zemědělsko-rybniční krajina, (17) zemědělská krajina v rovině, (18) krajina úzkých zaříznutých údolí v plošině, (19) krajina výrazných údolí, (20) krajina výrazných vrchů."@cs,
+    "Type of structure is one of four basic properties of locality, which participates in its target character. Metropolitan plan provides a type of structure for every locality, distinguishing a) ten types of structure for buildable constuction localities: (01) growing structure, (02) block structure, (03) hybrid structure, (04) heterogeneous structure, (05) rural structure, (06) garden city structure, (07) modernist structure, (08) structure of production areas, (09) structure of facilities, (10) linear structure, b) three types of structure for buildable non-construction localities: (11) park grounds, (12) park area, (13) park forest and c) seven types of structure for non-buildable localities: (14) forest plain landscape, (15) forest-agricultural landscape, (16) agro-pond landscape, (17) agricultural plain landscape, (18) landscape of narrow-cut valleys in plateau, (19) landscape of significant valleys, ( 20) the landscape of significant hills."@en;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_40";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-3/h-2/p-40/o-1",
+    "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-3/h-2/p-40/o-2", "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-3/h-0/p-36/o-1/b-b" .
+
+ns1:modernistická-zástavba a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-objektu>,
+    owl:Class;
+  skos:broader ns1:zástavba;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Modernistická zástavba"@cs, "Modernistic development"@en;
+  skos:definition "Zástavba, která se vyznačuje volným zastavěním solitérními budovami."@cs,
+    "Development characteristic buit-up by  solitary buildings."@en;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_5";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-1/h-II/p-5/o-1/b-g" .
+
+ns1:zástavba a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-objektu>,
+    owl:Class;
+  skos:broader <https://slovník.gov.cz/datový/psp-2016/pojem/budova-nebo-soubor-budov>,
+    ns1:zástavba-stavebního-bloku-včetně-proluk-a-uliční-prostranství;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Zástavba"@cs, "Development"@en;
+  skos:definition "Building or set of buildings in one or more construction blocks."@en,
+    "Budova nebo soubor budov v rámci jednoho nebo více stavebních bloků."@cs;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_3";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-1/h-II/p-3/o-4" .
+
+ns1:zastavitelná-stabilizovaná-nestavební-plocha a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-objektu>,
+    <https://slovník.gov.cz/základní/pojem/role>, owl:Class;
+  skos:broader <https://slovník.gov.cz/základní/pojem/typ-objektu>, <https://slovník.gov.cz/legislativní/sbírka/183/2006/pojem/zastavitelná-plocha>,
+    <https://slovník.gov.cz/datový/psp-2016/pojem/stabilizovaná-plocha>, <https://slovník.gov.cz/základní/pojem/role>;
+  skos:topConceptOf <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Zastavitelná stabilizovaná nestavební plocha"@cs, "Buildable stabilized non-construction surface"@en;
+  skos:definition "Part of buildable area, which is a on-construction block or set of non-construction blocks with stable character. Partial changes are allowed, but it is always necessary to take the existing character of the area into account."@en,
+    "Část zastavitelného území, která je nestavebním blokem nebo souborem nestavebních bloků s ustáleným charakterem. V zastavitelné stabilizované ploše nejsou vyloučeny dílčí změny, vždy je však nutné přihlédnout ke stávajícímu charakteru území."@cs;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_70";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-3/h-4/p-70/o-2" .
+
+ns1:struktura a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-vlastnosti>,
+    owl:DatatypeProperty;
+  skos:broader <https://slovník.gov.cz/základní/pojem/typ-vlastnosti>, <https://slovník.gov.cz/základní/pojem/vlastnost>;
+  skos:topConceptOf <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  rdfs:subPropertyOf <https://slovník.gov.cz/základní/pojem/vlastnost>;
+  rdfs:domain ns1:cílový-charakter-lokality;
+  rdfs:range rdfs:Literal;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Struktura"@cs, "Structure"@en;
+  skos:definition "Spatial composition of elements and parts arranged in the whole of certain properties, showing off a clear degree of regularity and lawfulness."@en,
+    "Prostorová skladba prvků a částí uspořádaná v celek určitých vlastností vykazující zřetelnou míru pravidelnosti a zákonitosti."@cs;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_4";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-3/h-0/p-36/o-1/b-b",
+    "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-1/h-2/p-4/o-1/b-g" .
+
+ns1:krajina-ve-městě a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-objektu>,
+    owl:Class;
+  skos:broader ns1:zastavitelná-nestavební-lokalita;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Krajina ve městě"@cs, "Landscape in a city"@en;
+  skos:definition "Landscape in a city is a non-construction structure made up by non-construction blocks."@en,
+    "Krajinou ve městě se rozumí nestavební struktura města tvořená nestavebními bloky."@cs;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_5";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-1/h-2/p-5/o-1/b-e" .
+
+ns1:zastavitelná-nestavební-lokalita a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-objektu>,
+    <https://slovník.gov.cz/základní/pojem/fáze>, owl:Class;
+  skos:broader ns1:zastavitelná-lokalita;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Zastavitelná nestavební lokalita"@cs, "Buildable non-construction locality"@en;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_40";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-3/h-II/p-40/o-2/b-b" .
+
+ns1:správní-území-prahy a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-objektu>,
+    owl:Class;
+  skos:broader <https://slovník.gov.cz/základní/pojem/typ-objektu>, <https://slovník.gov.cz/legislativní/sbírka/183/2006/pojem/území>;
+  skos:topConceptOf <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Správní území Prahy"@cs, "Administrative territory of Prague"@en .
+
+ns1:nezastavitelná-přírodní-lokalita a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-objektu>,
+    <https://slovník.gov.cz/základní/pojem/fáze>, owl:Class;
+  skos:broader ns1:nezastavitelná-lokalita;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Non-buildable natural locality"@en, "Nezastavitelná přírodní lokalita"@cs;
+  skos:definition "Non-buildable natural locality has its main use in protection of preserved natural  values, allowing adequate recreational use at the same time. It is delimited for protection of this specific use."@en,
+    "Hlavním využitím nezastavitelné přírodní lokality je ochrana dochovaných přírodních hodnot při současném umožnení přiměřeného rekreačního využití. Je vymezena pro ochranu a rozvoj tohoto specifického určení."@cs;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_66";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-III/h-3/p-66/o-1" .
+
+ns1:nezastavitelná-lokalita a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-objektu>,
+    <https://slovník.gov.cz/základní/pojem/fáze>, owl:Class;
+  skos:broader <https://slovník.gov.cz/základní/pojem/typ-objektu>, <https://slovník.gov.cz/datový/psp-2016/pojem/lokalita>,
+    <https://slovník.gov.cz/základní/pojem/fáze>;
+  skos:topConceptOf <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Nezastavitelná lokalita"@cs, "Non-buildable locality"@en;
+  skos:definition "Nezastavitelné lokality tvoří nezastavitelné území. V nezastavitelných lokalitách nelze umisťovat nové budovy ani jiné stavby, pokud nejsou uvedeny v čl. 65 až 67. V nezastavitelném území se mohou vyskytovat stávající zastavěné plochy označované jako samoty, pro které jsou stanoveny samostatné podmínky v čl. 91."@cs,
+    "Non-buildable localities create non-buildable area. It is not allowed to create new buildings or other constructions in the non-buildable areas with the exception of those listed in articles 65 to 67. Already existing built-up surfaces may appear in non-buildable localities. Standalone conditions for them are defined in article 91."@en;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_39";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-3/h-II/p-40/o-2/b-c",
+    "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-3/h-I/p-39/o-3" .
+
+ns1:obecný-regulativ a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-objektu>,
+    <https://slovník.gov.cz/základní/pojem/druh>, owl:Class;
+  skos:broader <https://slovník.gov.cz/základní/pojem/druh>, ns1:regulace-pro-využití-a-uspořádání-území-lokality;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "General regulative"@en, "Obecný regulativ"@cs;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_37";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-3/h-0/p-37/o-2" .
+
+ns1:regulace-pro-využití-a-uspořádání-území-lokality a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-objektu>,
+    <https://slovník.gov.cz/základní/pojem/kategorie>, owl:Class;
+  skos:broader <https://slovník.gov.cz/základní/pojem/typ-objektu>, <https://slovník.gov.cz/základní/pojem/objekt>,
+    <https://slovník.gov.cz/základní/pojem/kategorie>;
+  skos:topConceptOf <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Regulation for usage and arrangement of locality area"@en, "Regulace pro využití a uspořádání území lokality"@cs;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_37";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-3/h-0/p-37/o-1" .
+
+ns1:krajina a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-objektu>, <https://slovník.gov.cz/základní/pojem/druh>,
+    owl:Class;
+  skos:broader <https://slovník.gov.cz/základní/pojem/typ-objektu>, <https://slovník.gov.cz/legislativní/sbírka/183/2006/pojem/území>,
+    <https://slovník.gov.cz/základní/pojem/druh>;
+  skos:topConceptOf <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Krajina"@cs, "Landscape"@en;
+  skos:definition "Part of the earth surface with characteristic relief, created by combination of natural and cultural features, while Metropolitan plan distinguishes two basic types of landscape, municipal and open."@en,
+    "Část zemského povrchu s chrakteristickým reliéfem, která je utvářena kombinací přírodních a kulturních prvků, přičemž Metropolitní plán rozlišuje dvě základní krajiny, a to městskou a otevřenou."@cs;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_5";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-1/h-II/p-5/o-1/b-a" .
+
+ns1:individuální-regulativ a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-objektu>,
+    <https://slovník.gov.cz/základní/pojem/druh>, owl:Class;
+  skos:broader <https://slovník.gov.cz/základní/pojem/druh>, ns1:regulace-pro-využití-a-uspořádání-území-lokality;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Individual regulative"@en, "Individuální regulativ"@cs;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_37";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-3/h-0/p-37/o-2" .
+
+ns1:zastavitelná-stabilizovaná-plocha a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-objektu>,
+    <https://slovník.gov.cz/základní/pojem/role>, owl:Class;
+  skos:broader <https://slovník.gov.cz/základní/pojem/typ-objektu>, <https://slovník.gov.cz/legislativní/sbírka/183/2006/pojem/zastavitelná-plocha>,
+    <https://slovník.gov.cz/datový/psp-2016/pojem/stabilizovaná-plocha>, <https://slovník.gov.cz/základní/pojem/role>;
+  skos:topConceptOf <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Zastavitelná stabilizovaná plocha"@cs, "Buildable stabilized surface"@en;
+  skos:definition "Část zastavitelného území s ustáleným charakterem, ve které se nepředpokládá výrazná změna struktury veřejných prostranství a zástavby. V zastavitelné stabilizované ploše nejsou vyloučeny dílčí změny, vždy je však nutné přihlédnout ke stávajícímu charakteru území."@cs,
+    "Part of buildable area with a stable character where are expected no significant changes in the structure of public spaces ind development. Partial changes are allowed, but it is always necessary to take the existing character of the area into account."@en;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_70";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-3/h-4/p-70/o-1" .
+
+ns1:nezastavitelná-transformační-plocha a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-objektu>,
+    <https://slovník.gov.cz/základní/pojem/role>, owl:Class;
+  skos:broader <https://slovník.gov.cz/základní/pojem/typ-objektu>, <https://slovník.gov.cz/datový/psp-2016/pojem/nezastavitelná-plocha>,
+    <https://slovník.gov.cz/datový/psp-2016/pojem/transformační-plocha>, <https://slovník.gov.cz/základní/pojem/role>;
+  skos:topConceptOf <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Non-buildable transformation surface"@en, "Nezastavitelná transformační plocha"@cs;
+  skos:definition "Část nezastavitelného území, pro kterou jsou stanoveny individuální požadavky na změnu charakteru území a ve které se neposuzuje stupeň ekologické stability."@cs,
+    "Part of non-buildable area with individual requirement  on character of area changes regardless the grade of ecological stability."@en;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_71";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-3/h-4/p-71/o-3" .
+
+ns1:zástavba-stavebního-bloku-včetně-proluk-a-uliční-prostranství a skos:Concept,
+    <https://slovník.gov.cz/základní/pojem/typ-objektu>, <https://slovník.gov.cz/základní/pojem/mixin>,
+    owl:Class;
+  skos:broader <https://slovník.gov.cz/základní/pojem/typ-objektu>, <https://slovník.gov.cz/základní/pojem/objekt>,
+    <https://slovník.gov.cz/základní/pojem/mixin>;
+  skos:topConceptOf <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Zástavba stavebního bloku včetně proluk a uliční prostranství"@cs,
+    "Development of construction block including free spaces and thoroughfares"@en .
+
+ns1:městská-krajina a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-objektu>,
+    <https://slovník.gov.cz/základní/pojem/fáze>, owl:Class;
+  skos:broader <https://slovník.gov.cz/datový/psp-2016/pojem/zastavitelné-území>, ns1:krajina,
+    <https://slovník.gov.cz/základní/pojem/fáze>;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Městská krajina"@cs, "Municipal landscape"@en;
+  skos:definition "Buildable area created by built-up environment and landscape in the city."@en,
+    "Zastavitelné území tvořené vystavěným prostředím a krajinou ve městě."@cs;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_5";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-1/h-II/p-5/o-1/b-b" .
+
+ns1:je-v-rámci-stavebního-bloku-modernistické-zástavby a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-vztahu>,
+    owl:ObjectProperty;
+  skos:broader ns1:je-v-rámci-stavebního-bloku;
+  rdfs:subPropertyOf ns1:je-v-rámci-stavebního-bloku;
+  rdfs:domain ns1:modernistická-zástavba;
+  rdfs:range ns1:stavební-blok-modernistické-zástavby;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "is within construction block of modernistic development"@en, "je v rámci stavebního bloku modernistické zástavby"@cs .
+
+ns1:stavební-blok-modernistické-zástavby a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-objektu>,
+    owl:Class;
+  skos:broader ns1:stavební-blok;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Construction block of modernistic development"@en, "Stavební blok modernistické zástavby"@cs .
+
+ns1:je-v-rámci-stavebního-bloku a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-vztahu>,
+    owl:ObjectProperty;
+  skos:broader <https://slovník.gov.cz/základní/pojem/typ-vztahu>, <https://slovník.gov.cz/základní/pojem/vztah>;
+  skos:topConceptOf <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  rdfs:subPropertyOf <https://slovník.gov.cz/základní/pojem/vztah>;
+  rdfs:domain ns1:zástavba;
+  rdfs:range ns1:stavební-blok;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "je v rámci stavebního bloku"@cs, "is within construction block"@en .
+
+ns1:zastavitelná-rekreační-lokalita a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-objektu>,
+    <https://slovník.gov.cz/základní/pojem/fáze>, owl:Class;
+  skos:broader ns1:zastavitelná-lokalita;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Zastavitelná rekreační lokalita"@cs, "Buildable recreational locality"@en;
+  skos:definition "Hlavním využitím zastavitelné rekreační lokality je rekreace, relaxace a sport, Je vymezena pro ochranu a rozvoj tohoto specificakého určení."@cs,
+    "Buildable recreational locality has its main use in recreation, relaxation a sports. It is delimited for protection of this specific use."@en;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_64";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-III/h-3/p-64/o-1" .
+
+ns1:zastavitelná-lokalita a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-objektu>,
+    <https://slovník.gov.cz/základní/pojem/fáze>, owl:Class;
+  skos:broader <https://slovník.gov.cz/základní/pojem/typ-objektu>, <https://slovník.gov.cz/datový/psp-2016/pojem/lokalita>,
+    <https://slovník.gov.cz/základní/pojem/fáze>;
+  skos:topConceptOf <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Zastavitelná lokalita"@cs, "Buildable locality"@en;
+  skos:definition "Zastavitelné lokality tvoří zastavitelné území. V zastavitelných lokalitách lze v souladu s podmínkami pro ně stanovenými umisťovat nové budovy a jiné stavby včetně změn stávajících budov a jiných staveb. Využití zastavitelných lokalit je podrobně posáno v čl. 62 až 64."@cs,
+    "Buildable localities create buildable areas. it is possible to place new buildings and other construction (including changes in already existing)  into the buildable localities according to the conditions set to those localities. Usage of buildable localities is descibed in detail in articles 62 to 64."@en;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_39";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/3.3/c-3/h-I/p-39/o-1" .
+
+ns1:stabilizovaná-flexibilní-lokalita a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-objektu>,
+    <https://slovník.gov.cz/základní/pojem/fáze>, owl:Class;
+  skos:broader ns1:stabilizovaná-lokalita;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Stabilized flexible locality"@en, "Stabilizovaná flexibilní lokalita"@cs;
+  skos:definition "stabilizovaná lokalita areálů, jejichž vnitřní uspořádání není pro charakter lokality zásadní, a proto Metropolitní plán stanovuje vyšší možnost změny zástavby v rámci stavebních bloků."@cs,
+    "Stabilized locality of areas with non-essential internal layout with higher possibility of changes in development within construction blocks."@en;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_69";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-3/h-4/p-69/o-1/b-b" .
+
+ns1:stabilizovaná-lokalita a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-objektu>,
+    <https://slovník.gov.cz/základní/pojem/fáze>, owl:Class;
+  skos:broader <https://slovník.gov.cz/základní/pojem/typ-objektu>, <https://slovník.gov.cz/datový/psp-2016/pojem/lokalita>,
+    <https://slovník.gov.cz/základní/pojem/fáze>;
+  skos:topConceptOf <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Stabilizovaná lokalita"@cs, "Stabilized locality"@en;
+  skos:definition "Stabilizovanou lokalitou je lokalita s ustáleným charakterem. Cílový charakter stabilizované lokality je odvozen od stávajícího charakteru."@cs,
+    "Stabilized locality is a locality with steady character. Target character of stabilized locality is derived from the current character."@en;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_69";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-3/h-IV/p-69/o-1" .
+
+ns1:nezastavitelná-stabilizovaná-plocha a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-objektu>,
+    <https://slovník.gov.cz/základní/pojem/role>, owl:Class;
+  skos:broader <https://slovník.gov.cz/základní/pojem/typ-objektu>, <https://slovník.gov.cz/datový/psp-2016/pojem/nezastavitelná-plocha>,
+    <https://slovník.gov.cz/datový/psp-2016/pojem/stabilizovaná-plocha>, <https://slovník.gov.cz/základní/pojem/role>;
+  skos:topConceptOf <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Non-buildable stabilized surface"@en, "Nezastavitelná stabilizovaná plocha"@cs;
+  skos:definition "Part of non-buildable area with stable character. Partial changes are allowed in accordance woth the assessment of ecological stability."@en;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_70";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-3/h-4/p-70/o-3" .
+
+ns1:kód-lokality a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-vlastnosti>,
+    owl:DatatypeProperty;
+  skos:broader <https://slovník.gov.cz/základní/pojem/typ-vlastnosti>, <https://slovník.gov.cz/základní/pojem/vlastnost>;
+  skos:topConceptOf <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  rdfs:subPropertyOf <https://slovník.gov.cz/základní/pojem/vlastnost>;
+  rdfs:domain <https://slovník.gov.cz/datový/psp-2016/pojem/lokalita>;
+  rdfs:range rdfs:Literal;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Code of locality"@en, "Kód lokality"@cs;
+  skos:definition "Locality has attached code, consisting of number and name of locality and identification of its basic properties."@en,
+    "Lokalita má přiřazen kód, který se skládá z čísla a jména lokality a identifikace jejích základních vlastností."@cs;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_35";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-3/h-0/p-35/o-3" .
+
+ns1:zastavitelná-stavební-lokalita a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-objektu>,
+    <https://slovník.gov.cz/základní/pojem/fáze>, owl:Class;
+  skos:broader ns1:zastavitelná-lokalita;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Zastavitelná stavební lokalita"@cs, "Buildable construction locality"@en;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_40";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-3/h-II/p-40/o-2/b-a" .
+
+ns1:jméno-lokality a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-vlastnosti>,
+    owl:DatatypeProperty;
+  skos:broader <https://slovník.gov.cz/základní/pojem/typ-vlastnosti>, <https://slovník.gov.cz/základní/pojem/vlastnost>;
+  skos:topConceptOf <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  rdfs:subPropertyOf <https://slovník.gov.cz/základní/pojem/vlastnost>;
+  rdfs:domain ns1:kód-lokality;
+  rdfs:range rdfs:Literal;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  <http://onto.fel.cvut.cz/ontologies/slovník/agendový/popis-dat/pojem/je-pojmem> <https://slovník.gov.cz/generický/mpp-3.5-np>;
+  <http://onto.fel.cvut.cz/ontologies/slovník/agendový/popis-dat/pojem/je-záznamem>
+    <https://slovník.gov.cz/generický/mpp-3.5-np>;
+  <http://onto.fel.cvut.cz/ontologies/slovník/agendový/popis-dat/pojem/má-editora> <http://onto.fel.cvut.cz/ontologies/uzivatel/dbecbf70-b6ae-40b6-9b4b-0b03c44bcfba>;
+  <http://onto.fel.cvut.cz/ontologies/slovník/agendový/popis-dat/pojem/má-datum-a-čas-modifikace>
+    "Wed Jan 22 09:22:07 UTC 2020";
+  skos:prefLabel "Jméno lokality"@cs, "Name of locality"@en;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_35";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-3/h-0/p-35/o-3";
+  <http://onto.fel.cvut.cz/ontologies/slovník/agendový/popis-dat/pojem/má-stav-pojmu>
+    <http://onto.fel.cvut.cz/ontologies/application/termit/pojem/navrhovaný-pojem> .
+
+ns1:stavební-blok a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-objektu>,
+    owl:Class;
+  skos:broader <https://slovník.gov.cz/základní/pojem/typ-objektu>, <https://slovník.gov.cz/legislativní/sbírka/183/2006/pojem/plocha>,
+    <https://slovník.gov.cz/datový/psp-2016/pojem/blok>;
+  skos:topConceptOf <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Stavební blok"@cs, "Construction block"@en;
+  skos:definition "Surface intended mostly for development."@en, "Plocha vymezená převážně pro zástavbu."@cs;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_5";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-1/h-II/p-5/o-1/b-k" .
+
+ns1:zastavitelná-transformační-nestavební-plocha a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-objektu>,
+    <https://slovník.gov.cz/základní/pojem/role>, owl:Class;
+  skos:broader <https://slovník.gov.cz/základní/pojem/typ-objektu>, <https://slovník.gov.cz/legislativní/sbírka/183/2006/pojem/zastavitelná-plocha>,
+    <https://slovník.gov.cz/datový/psp-2016/pojem/transformační-plocha>, <https://slovník.gov.cz/základní/pojem/role>;
+  skos:topConceptOf <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Buildable transformation non-construction surface"@en, "Zastavitelná transformační nestavební plocha"@cs;
+  skos:definition "Part of buildable area that is non-construction block or set of non-construction blocks with disturbed or unstable character, designated for the creation of new urban park."@en,
+    "Část zastavitelného území, která je nestavebním blokem nebo souborem nestavebních bloků, s narušeným či neustáleným charakterem vymezená pro vznik nového městského parku."@cs;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_71";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-3/h-4/p-71/o-2" .
+
+ns1:zastavitelnost a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-vlastnosti>,
+    <https://slovník.gov.cz/základní/pojem/typ-kvalitativní-vlastnosti>, owl:DatatypeProperty;
+  skos:broader <https://slovník.gov.cz/základní/pojem/typ-vlastnosti>, <https://slovník.gov.cz/základní/pojem/vlastnost>,
+    <https://slovník.gov.cz/základní/pojem/typ-kvalitativní-vlastnosti>;
+  skos:topConceptOf <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  rdfs:subPropertyOf <https://slovník.gov.cz/základní/pojem/vlastnost>;
+  rdfs:domain ns1:cílový-charakter-lokality;
+  rdfs:range rdfs:Literal;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Zastavitelnost"@cs, "Buildability"@en;
+  skos:definition "Buildability is one of four basic properties of locality, which participates in its target character. Metropolitan plan sets buildabiity to every locality distinguishing buildable and non-buildable localities."@en,
+    "Zastavitelnost je jednou ze čtyř základních vlastností lokality, která spoluutváří její cílový charakter. Metropolitní plán stanovuje každé lokalite zastavitelnost, přičemž rozlišuje lokality zastavitelné a nezastavitelné."@cs;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_38";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-3/h-I/p-38/o-1",
+    "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-3/h-1/p-38/o-1", "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-3/h-0/p-36/o-1/b-a" .
+
+ns1:cílový-charakter-lokality a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-vlastnosti>;
+  skos:broader <https://slovník.gov.cz/základní/pojem/typ-vlastnosti>, <https://slovník.gov.cz/základní/pojem/vlastnost>;
+  skos:topConceptOf <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  rdfs:subPropertyOf <https://slovník.gov.cz/základní/pojem/vlastnost>;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  <http://onto.fel.cvut.cz/ontologies/slovník/agendový/popis-dat/pojem/je-pojmem> <https://slovník.gov.cz/generický/mpp-3.5-np>;
+  <http://onto.fel.cvut.cz/ontologies/slovník/agendový/popis-dat/pojem/je-záznamem>
+    <https://slovník.gov.cz/generický/mpp-3.5-np>;
+  <http://onto.fel.cvut.cz/ontologies/slovník/agendový/popis-dat/pojem/má-editora> <http://onto.fel.cvut.cz/ontologies/uzivatel/dbecbf70-b6ae-40b6-9b4b-0b03c44bcfba>;
+  <http://onto.fel.cvut.cz/ontologies/slovník/agendový/popis-dat/pojem/má-datum-a-čas-modifikace>
+    "Wed Jan 22 09:22:07 UTC 2020";
+  skos:prefLabel "Cílový charakter lokality"@cs, "Target character of locality"@en;
+  skos:definition "Cílovým charakterem lokality je soubor čtyř základních vlastností lokality v kombinaci s individuálním popisem a navrženým řešením ploch struktury."@cs,
+    "Target character of locality is set of four basic properties of locality in combination with designed solution of structure areas."@en;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_36";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-3/h-0/p-36/o-1";
+  <http://onto.fel.cvut.cz/ontologies/slovník/agendový/popis-dat/pojem/má-stav-pojmu>
+    <http://onto.fel.cvut.cz/ontologies/application/termit/pojem/navrhovaný-pojem> .
+
+ns1:krycí-list-odůvodnění a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-objektu>,
+    owl:Class;
+  skos:broader <https://slovník.gov.cz/základní/pojem/typ-objektu>, <https://slovník.gov.cz/základní/pojem/objekt>;
+  skos:topConceptOf <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Krycí list odůvodnění"@cs, "Cover sheet of explanation"@en;
+  skos:definition "Cover sheety of explanation is created for every locality and contains additional information to designate the locality and justify regulations related to the locality."@en,
+    "Pro každou lokalitu je vypracován také krycí list odůvodnění (dále jen „KLO“), který obsahuje doplňkové informace k vymezení lokality a odůvodnění regulativů vázaných na lokalitu."@cs;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_37";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-3/h-0/p-37/o-3" .
+
+ns1:park a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-objektu>, owl:Class;
+  skos:broader <https://slovník.gov.cz/základní/pojem/typ-objektu>, <https://slovník.gov.cz/legislativní/sbírka/183/2006/pojem/část-území>;
+  skos:topConceptOf <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Park"@cs, "Park"@en;
+  skos:definition "Delimited part of area consisting of non-construction blocks or areas of open landscape."@en,
+    "Vymezená část území skládající se převážně z nestavebních bloků nebo z ploch otevřené krajiny."@cs;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_5";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-1/h-II/p-5/o-1/b-f" .
+
+ns1:typ-struktury-pro-zastavitelné-stavební-lokality a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-vlastnosti>,
+    <https://slovník.gov.cz/základní/pojem/typ-kvalitativní-vlastnosti>;
+  skos:broader ns1:typ-struktury;
+  rdfs:subPropertyOf ns1:typ-struktury;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Type of structure for buildable construction localities"@en, "Typ struktury pro zastavitelné stavební lokality"@cs;
+  skos:definition "Ten types of structure for buildable constuction localities: (01) growing structure, (02) block structure, (03) hybrid structure, (04) heterogeneous structure, (05) rural structure, (06) garden city structure, (07) modernist structure, (08) structure of production areas, (09) structure of facilities, (10) linear structure."@en,
+    "Deset typů struktur pro zastavitelné stavební lokality: (01) rostlá struktura, (02) bloková struktura, (03) hybridní struktura, (04) heterogenní struktura, (05) vesnická struktura, (06) struktura zahradního města, (07) modernistická struktura, (08) struktura areálů produkce, (09) struktura areálů vybavenosti, (10) lineární struktura."@cs;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_40";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-3/h-2/p-40/o-2/b-a" .
+
+ns1:zastavitelná-rozvojová-plocha a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-objektu>,
+    <https://slovník.gov.cz/základní/pojem/role>, owl:Class;
+  skos:broader <https://slovník.gov.cz/základní/pojem/typ-objektu>, <https://slovník.gov.cz/legislativní/sbírka/183/2006/pojem/zastavitelná-plocha>,
+    <https://slovník.gov.cz/datový/psp-2016/pojem/rozvojová-plocha>, <https://slovník.gov.cz/základní/pojem/role>;
+  skos:topConceptOf <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Zastavitelná rozvojová plocha"@cs, "Buildable development surface"@en;
+  skos:definition "Zastavitelná rozvojová plocha je část zastavitelného území vymezená v území dosud nezastavěném, pro kterou jsou stanoveny požadavky na vytvoření nového charakteru území."@cs,
+    "Buildable development surface is part of buildable area delimited in area not yet build-up, for which the requirements for creation of new area character are required."@en;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_72";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-3/h-4/p-72/o-1" .
+
+ns1:vystavěné-prostředí a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-objektu>,
+    owl:Class;
+  skos:broader ns1:zastavitelná-stavební-lokalita;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Vystavěné prostředí"@cs, "Buildup environment"@en;
+  skos:definition "Buildup environment is a construction structure of a city made up by dveelopment of construction blocks including spaces between builings and street areas."@en,
+    "Vystavěným prostředím se rozumí stavební struktura města tvořená zástavbou stavebních bloků včetně proluk a uličním prostranstvím."@cs;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_5";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-1/h-2/p-5/o-1/b-d" .
+
+ns1:zastavitelná-produkční-lokalita a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-objektu>,
+    <https://slovník.gov.cz/základní/pojem/fáze>, owl:Class;
+  skos:broader ns1:zastavitelná-lokalita;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Zastavitelná produkční lokalita"@cs, "Buildable production locality"@en;
+  skos:definition "Hlavním využitím zastavitelné produkční lokality je průmyslové a logistické zázemí města s vyšší zátěží území. Lokality jsou vymezeny pro ochranu a rozvoj tohoto specifického určení."@cs,
+    "Buildable production locality has its main use in  industrial and logistics background of the municipality with higher load on the area. The locations are defined to protect and develop this specific destination."@en;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_62";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-III/h-3/p-62/o-1" .
+
+ns1:číslo-lokality a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-vlastnosti>,
+    owl:DatatypeProperty;
+  skos:broader <https://slovník.gov.cz/základní/pojem/typ-vlastnosti>, <https://slovník.gov.cz/základní/pojem/vlastnost>;
+  skos:topConceptOf <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  rdfs:subPropertyOf <https://slovník.gov.cz/základní/pojem/vlastnost>;
+  rdfs:domain ns1:kód-lokality;
+  rdfs:range rdfs:Literal;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Číslo lokality"@cs, "Number of locality"@en;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_35";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-3/h-0/p-35/o-3" .
+
+ns1:zastavitelná-rozvojová-nestavební-plocha a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-objektu>,
+    <https://slovník.gov.cz/základní/pojem/role>, owl:Class;
+  skos:broader <https://slovník.gov.cz/základní/pojem/typ-objektu>, <https://slovník.gov.cz/legislativní/sbírka/183/2006/pojem/zastavitelná-plocha>,
+    <https://slovník.gov.cz/datový/psp-2016/pojem/rozvojová-plocha>, <https://slovník.gov.cz/základní/pojem/role>;
+  skos:topConceptOf <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Zastavitelná rozvojová nestavební plocha"@cs, "Buildable development construction surface"@en;
+  skos:definition "Zastavitelná rozvojová nestavební plocha je část zastavitelného území vymezená v území dosud nezastavěném, která je nestavebním blokem nebo souborem nestavebních bloků a je vymezena pro vznik nového městského parku."@cs,
+    "Buildable development construction surface is part of buildable area delimited in the area not yet build-up, which is non-construction block or set of non-construction blocks and is delimited for creation of new city park."@en;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_72";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-3/h-4/p-72/o-2" .
+
+ns1:nezastavitelná-rekreační-lokalita a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-objektu>,
+    <https://slovník.gov.cz/základní/pojem/fáze>, owl:Class;
+  skos:broader ns1:nezastavitelná-lokalita;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Nezastavitelná rekreační lokalita"@cs, "Non-buildable recreational locality"@en;
+  skos:definition "Hlavním využitím nezastavitelné rekreační lokality je rekreace a sport."@cs,
+    "Non-buildable recreational locality has its main use in recreation and sports."@en;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_65";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-III/h-3/p-65/o-1" .
+
+ns1:rozvojová-lokalita a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-objektu>,
+    <https://slovník.gov.cz/základní/pojem/fáze>, owl:Class;
+  skos:broader <https://slovník.gov.cz/základní/pojem/typ-objektu>, <https://slovník.gov.cz/datový/psp-2016/pojem/lokalita>,
+    <https://slovník.gov.cz/základní/pojem/fáze>;
+  skos:topConceptOf <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Rozvojová lokalita"@cs, "Development locality"@en;
+  skos:definition "Rozvojovou lokalitou je lokalita , ve které je navrženo vytvoření nového charakteru území za podmínek stanovených  pro jednotlivé, zejména rozvojové plochy. Rozvojová lokalita je rozšířením městské krajiny do otevřené krajiny, proto není cílový charakter odvozen od stávajícího charakteru, ale nově navržen."@cs,
+    "Development locality is a locality in which is designed creation of new character of area based on conditions set for specific, mainly development surfaces. Development locality is expansion of municipal landscape into open landscape, and therefore target character of development locality is not derived from the current character, but newly designed."@en;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_69";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-3/h-IV/p-69/o-5" .
+
+ns1:park-ve-volné-zástavbě a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-objektu>,
+    owl:Class;
+  skos:broader ns1:park;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Park ve volné zástavbě"@cs, "Park in free development"@en;
+  skos:definition "Set of paved or non-paved publicly accessible areas inside construction block of modernistic development."@en,
+    "Soubor nezpevněných či zpěvněných veřejně přístupných ploch ve stavebním bloku modernistické zástavby."@cs;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_5";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-1/h-II/p-5/o-1/b-h" .
+
+ns1:stabilizovaná-chráněná-lokalita a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-objektu>,
+    <https://slovník.gov.cz/základní/pojem/fáze>, owl:Class;
+  skos:broader ns1:stabilizovaná-lokalita;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Stabilized protected locality"@en, "Stabilizovaná chráněná lokalita"@cs;
+  skos:definition "Stabilizovaná lokalita historické zástavby vyznačující se mimořádně ucelenou a zachovalou strukturou veřejných prostranství a plně ustálenou strukturou zástavby a která je vymezena především pro ochranu stávajícího charakteru."@cs,
+    "Stabilized locality of historical development characterized by exceptionally  comprehensive and well-preserved structure of public spaces and a fully stable development structure, primarily intended to protect the existing character."@en;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_69";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-3/h-4/p-69/o-1/b-a" .
+
+ns1:uliční-prostranství a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-objektu>,
+    owl:Class;
+  skos:broader <https://slovník.gov.cz/datový/psp-2016/pojem/uliční-prostranství>, ns1:zástavba-stavebního-bloku-včetně-proluk-a-uliční-prostranství;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Uliční prostranství"@cs, "Street space"@en .
+
+ns1:stabilita a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-vlastnosti>,
+    <https://slovník.gov.cz/základní/pojem/typ-kvalitativní-vlastnosti>, owl:DatatypeProperty;
+  skos:broader <https://slovník.gov.cz/základní/pojem/typ-vlastnosti>, <https://slovník.gov.cz/základní/pojem/vlastnost>,
+    <https://slovník.gov.cz/základní/pojem/typ-kvalitativní-vlastnosti>;
+  skos:topConceptOf <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  rdfs:subPropertyOf <https://slovník.gov.cz/základní/pojem/vlastnost>;
+  rdfs:domain ns1:cílový-charakter-lokality;
+  rdfs:range rdfs:Literal;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Stabilita"@cs, "Stability"@en;
+  skos:definition "Stability is one of four basic properties of locality, which participates in its target character. Whole area of Prague is divided into stabilized, transformation and development localities based on stability."@en,
+    "Míra stability je jednou ze čtyř základních vlastností lokality, která spoluutváří její cílový charakter. Celé území Prahy je podle míry stability rozděleno na stabilizované, transformační a rozvojové plochy."@cs;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_68";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-3/h-0/p-68/o-2",
+    "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-3/h-0/p-68/o-1", "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-3/h-0/p-36/o-1/b-d" .
+
+ns1:navržené-prvky-infrastruktury a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-vlastnosti>,
+    owl:DatatypeProperty;
+  skos:broader <https://slovník.gov.cz/základní/pojem/typ-vlastnosti>, <https://slovník.gov.cz/základní/pojem/vlastnost>;
+  skos:topConceptOf <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  rdfs:subPropertyOf <https://slovník.gov.cz/základní/pojem/vlastnost>;
+  rdfs:domain ns1:cílový-charakter-lokality;
+  rdfs:range rdfs:Literal;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Navržené prvky infrastruktury"@cs, "Designed features of infrastructure"@en;
+  skos:definition "Nedílnou součástí cílového charakteru každé lokality jsou navržené prvky infrastruktury. Jednotlivé prvky infrastruktury musí být vždy navrhovány a realizovány v souladu s cílovým charakterem lokality. "@cs,
+    "Nondividable part of target character of every locality is designed features of infrastructure. Single features have to be always designed and realised in accordance with the target character of locality.  "@en;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_36";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-3/h-0/p-36/o-2" .
+
+ns1:zastavitelná-transformační-plocha a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-objektu>,
+    <https://slovník.gov.cz/základní/pojem/role>, owl:Class;
+  skos:broader <https://slovník.gov.cz/základní/pojem/typ-objektu>, <https://slovník.gov.cz/legislativní/sbírka/183/2006/pojem/zastavitelná-plocha>,
+    <https://slovník.gov.cz/datový/psp-2016/pojem/transformační-plocha>, <https://slovník.gov.cz/základní/pojem/role>;
+  skos:topConceptOf <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Zastavitelná transformační plocha"@cs, "Buildable transformation surface"@en;
+  skos:definition "Part of buildable area with disturbed or unstable character, for which the requirements for changing the character  are set without taking the existing character into account."@en,
+    "Část zastavitelného území s narušeným či neustáleným charakterem, pro kterou jsou stanoveny požadavky na změnu charakteru území bez přihlédnutí ke stávajícímu charakteru plochy."@cs;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_71";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-3/h-4/p-71/o-1" .
+
+ns1:otevřená-krajina a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-objektu>,
+    <https://slovník.gov.cz/základní/pojem/fáze>, owl:Class;
+  skos:broader <https://slovník.gov.cz/datový/psp-2016/pojem/nezastavitelné-území>,
+    ns1:krajina, <https://slovník.gov.cz/základní/pojem/fáze>;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Otevřená krajina"@cs, "Open landscape"@en;
+  skos:definition "Non-buildable area."@en, "Nezastavitelné území."@cs;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_5";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-1/h-II/p-5/o-1/b-c" .
+
+ns1:zastavitelná-obytná-lokalita a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-objektu>,
+    <https://slovník.gov.cz/základní/pojem/fáze>, owl:Class;
+  skos:broader ns1:zastavitelná-lokalita;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Zastavitelná obytná lokalita"@cs, "Buildable residence locality"@en;
+  skos:definition "Buildable residence locality has its main use in mixed residential municipality, including housing, public amenities and all services including working opportunities and their combinations."@en,
+    "Hlavním využitím zastavitelné obytné lokality je smíšené obytné město, které zahrnuje bydlení, veřejnou vybavenost a veškeré služby zahrnující i pracovní příležitosti a jejich kombinaci."@cs;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_63";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-III/h-3/p-63/o-1" .
+
+ns1:nestavební-blok a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-objektu>,
+    owl:Class;
+  skos:broader <https://slovník.gov.cz/základní/pojem/typ-objektu>, <https://slovník.gov.cz/legislativní/sbírka/183/2006/pojem/plocha>,
+    <https://slovník.gov.cz/datový/psp-2016/pojem/blok>;
+  skos:topConceptOf <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Nestavební blok"@cs, "Non-construction block"@en;
+  skos:definition "Surface intended mostly for non-construction purposes."@en, "Plocha vymezená převážně pro nestavební účely."@cs;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_5";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-1/h-II/p-5/o-1/b-j" .
+
+ns1:typ-struktury-pro-nezastavitelné-lokality a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-vlastnosti>,
+    <https://slovník.gov.cz/základní/pojem/typ-kvalitativní-vlastnosti>;
+  skos:broader ns1:typ-struktury;
+  rdfs:subPropertyOf ns1:typ-struktury;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Type of structure for non-buildable localities"@en, "Typ struktury pro nezastavitelné lokality"@cs;
+  skos:definition "Seven types of structure for non-buildable localities: (14) forest plain landscape, (15) forest-agricultural landscape, (16) agro-pond landscape, (17) agricultural plain landscape, (18) landscape of narrow-cut valleys in plateau, (19) landscape of significant valleys, ( 20) the landscape of significant hills."@en,
+    "Sedm typů struktur pro nezastavitelné lokality: (14) lesní krajina v rovině, (15) leso-zemědělská krajina, (16) zemědělsko-rybniční krajina, (17) zemědělská krajina v rovině, (18) krajina úzkých zaříznutých údolí v plošině, (19) krajina výrazných údolí, (20) krajina výrazných vrchů."@cs;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_40";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-3/h-2/p-40/o-2/b-c" .
+
+ns1:doplňkové-informace-k-vymezení-lokality-a-odůvodnění-regulativů a skos:Concept,
+    <https://slovník.gov.cz/základní/pojem/typ-objektu>, <https://slovník.gov.cz/základní/pojem/druh>,
+    owl:Class;
+  skos:broader <https://slovník.gov.cz/základní/pojem/typ-objektu>, <https://slovník.gov.cz/základní/pojem/objekt>,
+    <https://slovník.gov.cz/základní/pojem/druh>;
+  skos:topConceptOf <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Additional information for locality definition and explementation of regulatives"@en,
+    "Doplňkové informace k vymezení lokality a odůvodnění regulativů"@cs;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_37";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-3/h-0/p-37/o-3" .
+
+ns1:nezastavitelná-produkční-lokalita a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-objektu>,
+    <https://slovník.gov.cz/základní/pojem/fáze>, owl:Class;
+  skos:broader ns1:nezastavitelná-lokalita;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Nezastavitelná produkční lokalita"@cs, "Non-buildable production locality"@en;
+  skos:definition "Non-buildable production locality has its main use in economic, usually agricultural activity, allowing adequate recreational use at the same time."@en,
+    "Hlavním využitím nezastavitelné produkční lokality je hospodářská, obvykle zemědělská činnost člověka, při současném umožnění přiměřeného rekreačního využití."@cs;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_67";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-III/h-3/p-67/o-1" .
+
+ns1:nezastavitelná-rozvojová-plocha a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-objektu>,
+    <https://slovník.gov.cz/základní/pojem/role>, owl:Class;
+  skos:broader <https://slovník.gov.cz/základní/pojem/typ-objektu>, <https://slovník.gov.cz/datový/psp-2016/pojem/rozvojová-plocha>,
+    <https://slovník.gov.cz/datový/psp-2016/pojem/nezastavitelná-plocha>, <https://slovník.gov.cz/základní/pojem/role>;
+  skos:topConceptOf <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Non-buildable development surface"@en, "Nezastavitelná rozvojová plocha"@cs;
+  skos:definition "Non-bildable development construction surface is part of non-buildable area delimited in built-up area, for which the individual requirements for creation of new non-buildable character of area are set up and in which the level of ecological stability is not measured."@en,
+    "Nezastavitelná rozvojová plocha je část nezastavitelného území vymezená v zastavěném území, pro kterou jsou stanoveny individuální požadavky na vytvoření nového nezastavitelného charakteru území a ve které se neposuzuje stupeň ekologické stability."@cs;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_72";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-3/h-4/p-72/o-3" .
+
+ns1:využití a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-vlastnosti>,
+    <https://slovník.gov.cz/základní/pojem/typ-kvalitativní-vlastnosti>, owl:DatatypeProperty;
+  skos:broader <https://slovník.gov.cz/základní/pojem/typ-vlastnosti>, <https://slovník.gov.cz/základní/pojem/vlastnost>,
+    <https://slovník.gov.cz/základní/pojem/typ-kvalitativní-vlastnosti>;
+  skos:topConceptOf <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  rdfs:subPropertyOf <https://slovník.gov.cz/základní/pojem/vlastnost>;
+  rdfs:domain ns1:cílový-charakter-lokality;
+  rdfs:range rdfs:Literal;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Využití"@cs, "Use"@en;
+  skos:definition "Use is one of four basic properties of locality, which participates in its target character."@en,
+    "Způsob využití je jednou ze čtyř základních vlastností lokality, která spoluutváří její celkový charakter."@cs;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_61";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-3/h-3/p-61/o-2",
+    "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-3/h-0/p-36/o-1/b-c",
+    "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-3/h-3/p-61/o-1" .
+
+ns1:má-krycí-list-odůvodnění a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-vztahu>,
+    owl:ObjectProperty;
+  skos:broader <https://slovník.gov.cz/základní/pojem/typ-vztahu>, <https://slovník.gov.cz/základní/pojem/vztah>;
+  skos:topConceptOf <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  rdfs:subPropertyOf <https://slovník.gov.cz/základní/pojem/vztah>;
+  rdfs:domain <https://slovník.gov.cz/datový/psp-2016/pojem/lokalita>;
+  rdfs:range ns1:krycí-list-odůvodnění;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "has cover sheet of explenation"@en, "má krycí list odůvodnění"@cs .
+
+ns1:transformační-lokalita a skos:Concept, <https://slovník.gov.cz/základní/pojem/typ-objektu>,
+    <https://slovník.gov.cz/základní/pojem/fáze>, owl:Class;
+  skos:broader <https://slovník.gov.cz/základní/pojem/typ-objektu>, <https://slovník.gov.cz/datový/psp-2016/pojem/lokalita>,
+    <https://slovník.gov.cz/základní/pojem/fáze>;
+  skos:topConceptOf <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Transformační lokalita"@cs, "Transformation locality"@en;
+  skos:definition "Transformační lokalitou je lokalita s narušeným či neustáleným charakterem, ve které jsou navrženy rozsáhlé, popřípadě celkové změny v utváření území nebo jeho využití za podmínek stanovených pro jednotlivé, zejména transformační, plochy. V transformační lokalitě není cílový charakter odvozen od stávajícího charakteru, ale nově navržen."@cs,
+    "Transformation locality is a locality with disturbed or unstable character in which are designed  large or  overall changes in land-use based on the conditions set for specific, mainly transformation surfaces. Target character of transformation locality is not derived from the current character, but newly designed."@en;
+  dcterms:source "https://plan.app.iprpraha.cz/texty/#tco9_cl_69";
+  dcterms:relation "http://onto.fel.cvut.cz/ontologies/slovník/datový/mpp/navrh/c-3/h-IV/p-69/o-4" .
+
+ns1:typ-lokality-dle-zastavitelnosti-a-struktury a skos:Concept;
+  skos:topConceptOf <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Type of locality according to the  buildability and structure"@en,
+    "Typ lokality dle zastavitelnosti a struktury"@cs .
+
+ns1:typ-lokality-dle-zastavitelnosti-a-využití a skos:Concept;
+  skos:topConceptOf <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Type of locality according to the buildability and usage"@en, "Typ lokality dle zastavitelnosti a využití"@cs .
+
+ns1:typ-lokality-dle-míry-stability a skos:Concept;
+  skos:topConceptOf <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Typ lokality dle míry stability"@cs, "Type of locality according to the stability level"@en .
+
+ns1:typ-lokality-dle-zastavitelnosti a skos:Concept;
+  skos:topConceptOf <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Typ lokality dle zastavitelnosti"@cs, "Type of locality according to the buildability"@en .
+
+ns1:budova a skos:Concept;
+  skos:exactMatch <https://slovník.gov.cz/datový/jvfdtm/pojem/14>;
+  skos:topConceptOf <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:inScheme <https://slovník.gov.cz/generický/mpp-3.5-np/glosář>;
+  skos:prefLabel "Budova"@cs;
+  skos:definition "Nadzemní stavba spojená se zemí zpravidla pevným základem, prostorově kompaktní a vůči vnějšímu prostředí převážně uzavřená obvodovými stěnami a střešní konstrukcí.Budovy vytvářejí zástavbu a jejich umístění je regulováno Metropolitním plánem."@cs;
+  <http://onto.fel.cvut.cz/ontologies/slovník/agendový/popis-dat/pojem/má-stav-pojmu>
+    <http://onto.fel.cvut.cz/ontologies/application/termit/pojem/navrhovaný-pojem> .
+
+<https://slovník.gov.cz/datový/jvfdtm/pojem/14> a skos:Concept;
+  skos:broader <https://slovník.gov.cz/datový/jvfdtm/pojem/13>;
+  skos:exactMatch ns1:budova;
+  skos:inScheme <https://slovník.gov.cz/datový/jvfdtm/glosář>;
+  skos:prefLabel "Budova"@cs;
+  skos:scopeNote "DEFINICE: budovou se zde rozumí nadzemní stavba spojená se zemí pevným základem, která je prostorově soustředěna a navenek převážně uzavřena obvodovými stěnami a střešní konstrukcí. ,   ZDROJ: Zákon č. 256/2013 Sb., o katastru nemovitostí (katastrální zákon), ve znění pozdějších předpisů, § 2 odst. 1, písm. l.,   PLATNOST_OD: 1.1.2019 v 00:00,  PLATNOST_DO: 31.1.9999 v 23:59 **************************************************************************************************** DEFINICE: budovou se zde rozumí nadzemní stavba včetně její podzemní části prostorově soustředěná a navenek převážně uzavřená obvodovými stěnami a střešní konstrukcí,   ZDROJ: Vyhláška č. 268/2009 Sb., o technických požadavcích na stavby, ve znění pozdějších předpisů § 3 písm. a.,   PLATNOST_OD: 1.1.2019 v 00:00,  PLATNOST_DO: 31.1.9999 v 23:59 **************************************************************************************************** DEFINICE: budovou je užitkový prostor, častěji však soubor více užitkových prostorů k různému účelu (pro různé procesy v nich probíhající), které jsou soustředěny do ohraničeného a uzavřeného celku. Tento celek je ohraničen obvodovými stěnami a zakryt konstrukcí střechy. Tento celek a jeho prvky jsou sestaveny podle příslušné dokumentace, odpovídající technickým, legislativním a provozním potřebám a nárokům. Budova je obvykle vybavena technickým zařízením, budova muže být stavbou, stavebním objektem nebo jinou částí stavby. Budovy jsou zapsány do katastru nemovitostí po splnění těchto podmínek: a) zaměření geometrickým plánem, b) kolaudací, c) přidělením popisného nebo evidenčního čísla ,   ZDROJ: Matějka 2000,   PLATNOST_OD: 1.1.2019 v 00:00,  PLATNOST_DO: 31.1.9999 v 23:59 **************************************************************************************************** DEFINICE: budova je nadzemní stavba prostorově soustředěná a navenek převážně uzavřená obvodovými stěnami a střešní konstrukcí; součástí budovy mohou být pouze ty podzemní prostory, které s budovou konstrukčně a stavebně souvisí ,   ZDROJ: CZ-CC – ČSÚ,   PLATNOST_OD: 1.1.2019 v 00:00,  PLATNOST_DO: 31.1.9999 v 23:59"@cs;
+  skos:definition "testdef"@cs;
+  skos:changeNote "14"^^<http://www.w3.org/2001/XMLSchema#int>;
+  <http://onto.fel.cvut.cz/ontologies/slovník/agendový/popis-dat/pojem/má-stav-pojmu>
+    <http://onto.fel.cvut.cz/ontologies/application/termit/pojem/navrhovaný-pojem> .
+
+<https://slovník.gov.cz/datový/jvfdtm/glosář> a owl:Ontology, skos:ConceptScheme,
+    <http://onto.fel.cvut.cz/ontologies/slovník/agendový/popis-dat/pojem/glosář>;
+  dcterms:title "Slovník Ontologického katalogu - původní"@cs;
+  dcterms:description """původní ontologický katalog bez vazby na novou Vyhlášku č.393/2020 Sb.;
+(k jednomu pojmu může být v poznámce více definic)"""@cs .
